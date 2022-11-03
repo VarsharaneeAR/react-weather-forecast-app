@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+}
+
+.Weather {
+    padding: 14px;
+    margin: 15px;
+    border-radius: 4px;
+    background: linear-gradient(99.6deg, rgba(0, 0, 0, 0.427)
+    10.6%,  rgba(112, 128, 152, 0.509) 32.9%,   #7f555796 72.8%, rgba(81, 90, 100, 0.717) 100.1%, #7f5557 90.8%,  rgba(0, 0, 0, 0.313) 50.6%);
+}
+
+.Weather h1 {
+    padding-top: 1em;
+    text-shadow: 0 0 2.5px black;
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 28px;
+}
+
+.Weather ul{
+    margin:0;
+    padding: 0;
+}
+
+.Weather li{
+    font-size: 16px;
+    font-weight: 350px;
+    line-height: 18px;
+    list-style: none;
+}
+
+.Weather .current{
+    color:aliceblue;
+}
+
+.Weather .elements{
+    color: black;
+}
+
+.Weather ::placeholder{
+    color: rgb(21,33,45);
+    text-shadow: 0 0 2.5px rgb(192, 133, 159);
+
+}
+
+.Weather .temperature {
+    color: rgb(192, 133, 159);
+    font-size: 36px;
+    top: -24px;
+    
+}
