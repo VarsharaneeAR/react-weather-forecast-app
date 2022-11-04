@@ -6,16 +6,27 @@ import "./Weather.css";
 
 
 export default function Weather (){
-const[ready,setReady] = useState(false);
-const[temperature, setTemperature]= useState(null);
+const [ready, setReady] = useState(false);
+const[weatherData, setWeatherData]= useState({ready:false});
 
    function handleResponse(response){
       console.log(response.data);
-      setTemperature(response.data.main.temp);
-      setReady(true);
+      setWeatherData({
+        ready: true,
+        temperature:response.data.main.temp,
+        city: response.data.name,
+        humidity: response.data.main.humidity,
+        description:response.data.weather[0].description,
+        wind: response.data.wind.speed,
+        iconUrl: "https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png",
+        date: "Friday 11:11",
+
+      })
+     
+     
 
    }
- if (ready){
+ if (weatherData.ready){
    return(
       <div className="Weather">
         <form >
@@ -29,27 +40,27 @@ const[temperature, setTemperature]= useState(null);
            </div>
             </div>
         </form>
-        <h1>Harare</h1>
+        <h1>{weatherData.city}</h1>
              <ul className="current">
-                   <li> Thursday 2:22
+                   <li> date
                   </li>
-                  <li className="text-capitalize">Mostly Sunny</li>
+                  <li className="text-capitalize">{weatherData.description}</li>
              </ul>
          <div className="row">
              <div className="col-6">
-               <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="description" className="float-left"/>
-                <span className="temperature">{temperature}</span><strong>°C</strong>
+               <img src={weatherData.iconUrl} alt="weatherIcon" className="float-left"/>
+                <span className="temperature">{Math.round(weatherData.temperature)}</span><strong>°C</strong>
              </div>
                 <div className="col-6">
                    <ul className="elements">
                      <li>
-                       Precipitation : 10%
+                       Precipitation : ...
                      </li>
                     <li>
-                       Humidity      : 2%
+                       Humidity      : {weatherData.humidity} %
                     </li>
                        <li>
-                      Wind Speed : 3km
+                      Wind Speed : {Math.round(weatherData.wind)} km/h
                        </li>
                    </ul>
                  </div>
@@ -59,7 +70,7 @@ const[temperature, setTemperature]= useState(null);
         
  else { 
    
- const apiKey ="80d346c6056f6360cf797883c461a37b";
+ const apiKey ="e947cb2640f1db92e6a19005bc43b435";
  let city = "Harare";
  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
