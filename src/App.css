@@ -2,9 +2,16 @@ a {
 text-decoration: none;
 color: rgb(192, 133, 159);
 }
-
+ header{
+    
+        font-size: x-small;
+        text-align: center;
+        color: aliceblue;
+    
+ }
 footer{
     padding-top: 45px;
     color: white;
+    text-align: center;
 
 }

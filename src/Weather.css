@@ -5,8 +5,8 @@ body{
 }
 
 .Weather {
-    padding: 14px;
-    margin: 15px;
+    padding: 12px;
+    margin: 10px;
     border-radius: 4px;
     background: linear-gradient(99.6deg, rgba(0, 0, 0, 0.427)
     10.6%,  rgba(112, 128, 152, 0.509) 32.9%,   #7f555796 72.8%, rgba(81, 90, 100, 0.717) 100.1%, #7f5557 90.8%,  rgba(0, 0, 0, 0.313) 50.6%);
@@ -38,6 +38,7 @@ body{
 }
 
 .Weather .elements{
+    padding-top: 1.5em;
     color: black;
 }
 
@@ -50,6 +51,16 @@ body{
 .Weather .temperature {
     color: rgb(192, 133, 159);
     font-size: 36px;
-    top: -24px;
-    
+  line-height: 84px;
+  font-weight: 400;
+
 }
+
+.Weather .units {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    line-height: 1;
+    top: -34px;
+  }

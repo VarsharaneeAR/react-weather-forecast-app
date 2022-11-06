@@ -7,7 +7,10 @@ export default function App() {
     <div className="App">
      
      <div className="container">
-  
+       <header className="quote">
+        <p className="quote">“Be happy in the moment, that’s enough. Each moment is all we need, not more.” — Mother Teresa</p>
+        </header>
+        
      <Weather defaultCity="Harare"/>
 
      <footer>
