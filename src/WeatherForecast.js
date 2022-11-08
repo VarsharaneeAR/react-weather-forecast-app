@@ -30,6 +30,7 @@ import WeatherForecastDay from "./WeatherForecastDay";
                    </div>
                  );
                 }
+                return null;
                 })}
                </div>
              </div>
